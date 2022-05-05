@@ -25,7 +25,7 @@
       <ul>
         <li>Pepperoni</li>
         <li>Sweet potato</li>
-        <li>Jalapenos</li>
+        <li>Jalapeno</li>
         <li>Roasted Garlic</li>
         <li>Mushrooms</li>
         <li>Carmelized Onion</li>
@@ -41,7 +41,41 @@
     </div>
     <div class="order">
       <form id="pizzaOrderInputForm" >
-        
+        <label for="pizzaSize">Select your pizza size:</label>
+        <select class="formControl" id="pizzaSize">
+          <option hidden disabled selected value> -- select an option -- </option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+        <fieldset>
+          <legend>Select your topping(s):</legend>
+          <div>
+            <input type="checkbox" id="pepperoni" name="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sweetPotato" name="sweetPotato">
+            <label for="sweetPotato">sweet Potato</label>
+          </div>
+          <div>
+            <input type="checkbox" id="jalapeno" name="jalapeno">
+            <label for="jalapeno">Jalapeno</label>
+          </div>
+          <div>
+            <input type="checkbox" id="garlic" name="garlic">
+            <label for="garlic">Roasted Garlic</label>
+          </div>
+          <div>
+            <input type="checkbox" id="onion" name="onion">
+            <label for="onion">Caramelized Onion</label>
+          </div>
+          <div>
+            <input type="checkbox" id="tikka" name="tikka">
+            <label for="tikka">Chicken Tikka Massala</label>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn1">Place Order</button>
       </form>
 
     </div>
