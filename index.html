@@ -8,21 +8,23 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h2>From A to 'Za</h2>
+    <h4>Your favorite pizza people since 1974</h4>
+  </div>
   <div class="container">
-    <div class="jumbotron jumbotron-fluid text-center">
-      <h2>From A to 'Za</h2>
-      <h4>Your favorite pizza people since 1974</h4>
-    </div>
     <div class="menu leftPane">
       <p>From the freshest dough to the richly seasoned sauce, A to 'Za strives to craft the perfect pies.</p>
-      <p>Sizes available:
+      <p>Sizes and prices:
       <ul>
-        <li>Small - 10"</li>
-        <li>Medium - 15"</li>
-        <li>Large - 20"</li>
-      </ul></p>
-      <p>Toppings available (able to choose up to 3, mozzarella already included!):</p>
-      <ul>
+        <li>Small - 10", $12.99</li>
+        <li>Medium - 15", $16.99</li>
+        <li>Large - 20", $20.99</li>
+      </ul>
+      Mozzarella included, each additional topping is $1.50
+      </p>
+      <p>Toppings available (3 toppings max, please):</p>
+      <ul class="ingredientList">
         <li>Pepperoni</li>
         <li>Sweet potato</li>
         <li>Jalapeno</li>
@@ -31,17 +33,11 @@
         <li>Carmelized Onion</li>
         <li>Chicken tikka massala</li>
       </ul>
-      <p>Prices</p>
-      <ul>
-        <li>Small pizza: $12.99</li>
-        <li>Medium pizza: $16.99</li>
-        <li>Large pizza: $20.99</li>
-        <li>Each additional topping: $1.50</li>
-      </ul>
     </div>
     <div class="rightPane">
       <div class="order">
         <form id="pizzaOrderInputForm" >
+          <h4>Craft your perfect pizza</h4>
           <label for="pizzaSize">Select your pizza size:</label>
           <select class="formControl" id="pizzaSize">
             <option hidden disabled selected value> -- select an option -- </option>
@@ -78,10 +74,10 @@
           </fieldset>
           <button type="submit" class="btn1">Place Order</button>
         </form>
-        <div class="orderTotalDisplay">
-          Your order comes to a total of $<span id="price"></span>, please have correct change when picking up your pizza(s).  Thanks for letting us serve your needs from A to 'Za!
-        </div>
       </div>
+        <div class="orderTotalDisplay">
+          Your order comes to a total of $<span id="price"></span><br>  Please have correct change when picking up your pizza(s).  Thanks for letting us serve your needs from A to 'Za!
+        </div>
     </div>
   </div>
 </body>
