@@ -13,7 +13,7 @@
       <h2>From A to 'Za</h2>
       <h4>Your favorite pizza people since 1974</h4>
     </div>
-    <div class="menu">
+    <div class="menu leftPane">
       <p>From the freshest dough to the richly seasoned sauce, A to 'Za strives to craft the perfect pies.</p>
       <p>Sizes available:
       <ul>
@@ -39,45 +39,49 @@
         <li>Each additional topping: $1.50</li>
       </ul>
     </div>
-    <div class="order">
-      <form id="pizzaOrderInputForm" >
-        <label for="pizzaSize">Select your pizza size:</label>
-        <select class="formControl" id="pizzaSize">
-          <option hidden disabled selected value> -- select an option -- </option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-        <fieldset>
-          <legend>Select your topping(s):</legend>
-          <div>
-            <input type="checkbox" id="pepperoni" name="pepperoni">
-            <label for="pepperoni">Pepperoni</label>
-          </div>
-          <div>
-            <input type="checkbox" id="sweetPotato" name="sweetPotato">
-            <label for="sweetPotato">sweet Potato</label>
-          </div>
-          <div>
-            <input type="checkbox" id="jalapeno" name="jalapeno">
-            <label for="jalapeno">Jalapeno</label>
-          </div>
-          <div>
-            <input type="checkbox" id="garlic" name="garlic">
-            <label for="garlic">Roasted Garlic</label>
-          </div>
-          <div>
-            <input type="checkbox" id="onion" name="onion">
-            <label for="onion">Caramelized Onion</label>
-          </div>
-          <div>
-            <input type="checkbox" id="tikka" name="tikka">
-            <label for="tikka">Chicken Tikka Massala</label>
-          </div>
-        </fieldset>
-        <button type="submit" class="btn1">Place Order</button>
-      </form>
-
+    <div class="rightPane">
+      <div class="order">
+        <form id="pizzaOrderInputForm" >
+          <label for="pizzaSize">Select your pizza size:</label>
+          <select class="formControl" id="pizzaSize">
+            <option hidden disabled selected value> -- select an option -- </option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <fieldset>
+            <legend>Select your topping(s):</legend>
+            <div>
+              <input type="checkbox" id="pepperoni" name="pepperoni">
+              <label for="pepperoni">Pepperoni</label>
+            </div>
+            <div>
+              <input type="checkbox" id="sweetPotato" name="sweetPotato">
+              <label for="sweetPotato">Sweet Potato</label>
+            </div>
+            <div>
+              <input type="checkbox" id="jalapeno" name="jalapeno">
+              <label for="jalapeno">Jalapeno</label>
+            </div>
+            <div>
+              <input type="checkbox" id="garlic" name="garlic">
+              <label for="garlic">Roasted Garlic</label>
+            </div>
+            <div>
+              <input type="checkbox" id="onion" name="onion">
+              <label for="onion">Caramelized Onion</label>
+            </div>
+            <div>
+              <input type="checkbox" id="tikka" name="tikka">
+              <label for="tikka">Chicken Tikka Massala</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn1">Place Order</button>
+        </form>
+        <div class="orderTotalDisplay">
+          Your order comes to a total of $<span id="price"></span>, please have correct change when picking up your pizza(s).  Thanks for letting us serve your needs from A to 'Za!
+        </div>
+      </div>
     </div>
   </div>
 </body>
