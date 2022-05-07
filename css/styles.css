@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to top left, #e4e4e4, #c4a56b);
+  height: 100%;
 }
 
 .jumbotron {
@@ -56,9 +57,9 @@ body {
 }
 
 .orderTotalDisplay {
-  width: 80%;
-  height: fit-content;
-  margin-left: 10px;
+  width: 60%;
+  height: auto;
+  margin: auto;
   background-color: #990d0d;
   font-size: 18px;
   text-align: center;

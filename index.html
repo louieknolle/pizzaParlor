@@ -39,8 +39,8 @@
         <form id="pizzaOrderInputForm" >
           <h4>Craft your perfect pizza</h4>
           <label for="pizzaSize">Select your pizza size:</label>
-          <select class="formControl" id="pizzaSize">
-            <option hidden disabled selected value> -- select an option -- </option>
+          <select required class="formControl" id="pizzaSize">
+            <option disabled selected value> -- select an option -- </option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -75,10 +75,10 @@
           <button type="submit" class="btn1">Place Order</button>
         </form>
       </div>
-        <div class="orderTotalDisplay">
-          Your order comes to a total of <br>$<span id="price"></span>.<br>  Please have correct change when picking up your pizza.  Thanks for letting us serve your needs from A to 'Za!
-        </div>
-    </div>
+      <div class="orderTotalDisplay">
+        <p>Your order comes to a total of <br>$<span id="price"></span>.<br>  Please have correct change when picking up your pizza.  Thanks for letting us serve your needs from A to 'Za!</p>
+        <button type="submit" class="btn2 newOrder">New Order</button>
+      </div>
   </div>
 </body>
 </html>

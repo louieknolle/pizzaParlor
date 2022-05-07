@@ -16,11 +16,17 @@ PizzaOrder.prototype.calculateOrderTotal = function() {
   }
   
   if (this.pizzaToppings.length === 1) {
-    orderTotal += 1.50;
+    orderTotal += 1.5;
   } else if (this.pizzaToppings.length === 2) {
     orderTotal += 3;
   } else if (this.pizzaToppings.length === 3) {
-    orderTotal += 4.50;
+    orderTotal += 4.5;
+  } else if (this.pizzaToppings.length === 4) {
+    orderTotal += 6;
+  } else if (this.pizzaToppings.length === 5) {
+    orderTotal += 7.5;
+  } else if (this.pizzaToppings.length === 6) {
+    orderTotal += 9;
   } else {
     orderTotal;
   }
@@ -48,7 +54,16 @@ $(document).ready(function() {
 
     $('#price').html(orderTotal);
     $('.orderTotalDisplay').show();
-
-    
+    $('.leftPane').hide();
+    $('.order').hide();
   });
+
+  $('.newOrder').click(function(event) {
+    event.preventDefault();
+    $('.orderTotalDisplay').hide();
+    $('input:checkbox').prop('checked', false);
+    $('select').val($('option:disabled'));
+    $('.leftPane').show();
+    $('.order').show();
+  })
 });
