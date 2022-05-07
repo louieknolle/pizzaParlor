@@ -65,6 +65,11 @@ body {
   color: antiquewhite;
   border-radius: 10px;
   padding: 10px 10px;
+  display: none;
+}
+
+#price {
+  font-size: 24px;
 }
 
 legend {
