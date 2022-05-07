@@ -2,11 +2,10 @@
 function PizzaOrder(size, toppings) {
   this.sizeOfPizza = size;
   this.pizzaToppings = toppings;
-  this.calculateOrderTotal();
 }
 
 PizzaOrder.prototype.calculateOrderTotal = function() {
-  let orderTotal = 0;
+  // let orderTotal = 0;
 
   if (this.sizeOfPizza === 'small') {
     orderTotal = 12.99;
@@ -31,9 +30,9 @@ PizzaOrder.prototype.calculateOrderTotal = function() {
 
 // UI Logic
 $(document).ready(function() {
-  let orderTotal = 0;
   $('form#pizzaOrderInputForm').submit(function(event) {
     event.preventDefault();
+    let orderTotal = 0;
 
     const pizzaSize = $('#pizzaSize').val();
 
@@ -48,6 +47,6 @@ $(document).ready(function() {
 
     newPizza.calculateOrderTotal();
 
-    console.log(pizzaSize, toppings.length);
+    console.log(orderTotal);
   });
 });
