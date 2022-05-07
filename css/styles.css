@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to top left, #e4e4e4, #c5c5c5);
+  background: linear-gradient(to top left, #e4e4e4, #c4a56b);
 }
 
 .jumbotron {
@@ -9,14 +9,14 @@ body {
   margin: auto;
   border-radius: 48%;
   color: antiquewhite;
-  font-family: fantasy;
+  font-family: cursive;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  font-family: fantasy;
+  font-family:cursive;
 }
 
 .leftPane {
@@ -27,7 +27,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   font-size: 18px;
-  font-family: fantasy;
+  font-family: cursive;
 }
 
 .ingredientList {
@@ -43,7 +43,7 @@ body {
 }
 
 .order {
-  background-color: antiquewhite;
+  background-color: #f4f1ec;
   opacity: 75%;
   border-radius: 10px;
   text-align: center;
