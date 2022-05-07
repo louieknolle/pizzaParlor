@@ -16,11 +16,11 @@ PizzaOrder.prototype.calculateOrderTotal = function() {
     orderTotal = 20.99;
   }
   
-  if (this.pizzaToppings === 1) {
+  if (this.pizzaToppings.length === 1) {
     orderTotal += 1.50;
-  } else if (this.pizzaToppings === 2) {
+  } else if (this.pizzaToppings.length === 2) {
     orderTotal += 3;
-  } else if (this.pizzaToppings === 3) {
+  } else if (this.pizzaToppings.length === 3) {
     orderTotal += 4.50;
   } else {
     orderTotal;
@@ -31,8 +31,23 @@ PizzaOrder.prototype.calculateOrderTotal = function() {
 
 // UI Logic
 $(document).ready(function() {
+  let orderTotal = 0;
   $('form#pizzaOrderInputForm').submit(function(event) {
     event.preventDefault();
-    const pizzaSize = $
+
+    const pizzaSize = $('#pizzaSize').val();
+
+    let toppings = [];
+    $('input:checkbox').each(function () {
+      if (this.checked) {
+        toppings.push($(this).val);
+      }
+    });
+
+    const newPizza = new PizzaOrder (pizzaSize, toppings);
+
+    newPizza.calculateOrderTotal();
+
+    console.log(pizzaSize, toppings.length);
   });
 });
