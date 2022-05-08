@@ -30,7 +30,7 @@ PizzaOrder.prototype.calculateOrderTotal = function() {
   } else {
     orderTotal;
   }
-  return orderTotal;
+  return orderTotal.toPrecision(4);
 };
 
 
