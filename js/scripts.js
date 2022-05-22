@@ -38,7 +38,6 @@ PizzaOrder.prototype.calculateOrderTotal = function() {
 $(document).ready(function() {
   $('form#pizzaOrderInputForm').submit(function(event) {
     event.preventDefault();
-
     const pizzaSize = $('#pizzaSize').val();
 
     let toppings = [];
@@ -49,7 +48,6 @@ $(document).ready(function() {
     });
 
     const newPizza = new PizzaOrder (pizzaSize, toppings);
-    
     const orderTotal = newPizza.calculateOrderTotal();
 
     $('#price').html(orderTotal);
@@ -57,7 +55,6 @@ $(document).ready(function() {
     $('.leftPane').hide();
     $('.order').hide();
   });
-
   $('.newOrder').click(function(event) {
     event.preventDefault();
     $('.orderTotalDisplay').hide();
